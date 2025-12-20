@@ -1,0 +1,135 @@
+/* Holographic Card (Photo Focused) */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.holo-card {
+    position: relative;
+    width: 280px; /* Adjusted width */
+    padding: 0; /* Removed padding to focus on photo */
+    background: transparent; /* No background box */
+    border: none;
+    box-shadow: none;
+    animation: holo-float 6s ease-in-out infinite;
+}
+
+/* Removed holo-shine ::before */
+
+@keyframes holo-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.profile-img-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    
+    /* Holographic Border */
+    border: 1px solid rgba(215, 66, 245, 0.5);
+    box-shadow: 
+        0 0 15px rgba(215, 66, 245, 0.3),
+        inset 0 0 20px rgba(157, 0, 255, 0.3);
+    
+    transition: all 0.3s ease;
+    background: rgba(215, 66, 245, 0.05);
+}
+
+/* Holographic Scanlines */
+.profile-img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(215, 66, 245, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Holographic Sheen/Gradient */
+.profile-img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        125deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0) 40%, 
+        rgba(215, 66, 245, 0.2) 45%, 
+        rgba(157, 0, 255, 0.2) 50%, 
+        rgba(215, 66, 245, 0.2) 55%, 
+        rgba(255,255,255,0) 60%, 
+        rgba(255,255,255,0) 100%
+    );
+    background-size: 200% 200%;
+    animation: holo-sheen 5s infinite linear;
+    z-index: 3;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+@keyframes holo-sheen {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.profile-img-container:hover {
+    box-shadow: 
+        0 0 30px rgba(215, 66, 245, 0.5),
+        inset 0 0 30px rgba(157, 0, 255, 0.4);
+    border-color: #d742f5;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Removed hue-rotate and sepia to prevent color shifting to green */
+    filter: contrast(1.1) brightness(1.1) saturate(1.1);
+    opacity: 0.9;
+    /* Using a purple overlay blend instead */
+    mix-blend-mode: normal; 
+}
+
+/* Add a purple tint overlay */
+.profile-img-container .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(157, 0, 255, 0.3);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.profile-img-container:hover .img-overlay {
+    opacity: 0;
+}
+
+/* Add original color on hover */
+.profile-img-container:hover .profile-img {
+    filter: contrast(1.1) brightness(1.1);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+
