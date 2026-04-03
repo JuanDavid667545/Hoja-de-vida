@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de Vida | Futurist CV</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png?v=2">
+    <link rel="shortcut icon" href="images/favicon.png?v=2" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/card.css">
@@ -25,98 +28,176 @@
     </nav>
 
     <div class="content-wrapper">
-        <header class="hero-section">
+        <header class="hero-section card glass-panel">
             <div class="hero-left">
-                <h1 class="hero-title glitch" data-text="Desarrollador Front-end">Desarrollador Front-end</h1>
+                <h1 class="hero-title glitch" data-text="Hola! Soy Juan David">Hola! Soy Juan David</h1>
                 <p class="hero-desc" id="typewriter-text">
                     <!-- Text will be injected by JS -->
                 </p>
+                
+                <p class="hero-subdesc">
+                    Soy desarrollador de software con enfoque en la creación de interfaces modernas y funcionales. Me gusta trabajar en el desarrollo de experiencias digitales claras, rápidas y accesibles. Mantengo una actitud de mejora constante, buscando siempre fortalecer mis habilidades y aportar valor en cada proyecto
+                </p>
+
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-glow">Contácteme</a>
                     <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Descargar CV</a>
+                    <div class="hero-socials-inline">
+                        <a href="https://www.instagram.com/juan.dm0/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/JuanDavid667545" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
-                <div class="hero-socials">
-                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/juan.dm0/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                </div>
+
             </div>
             
             <div class="hero-right">
                 <div class="holo-card">
                     <div class="holo-content">
                         <div class="profile-img-container">
-                            <img src="https://placehold.co/300x300/9d00ff/ffffff?text=JD" alt="Juan David" class="profile-img">
+                            <img src="https://placehold.co/300x300/1e1e1e/ffffff?text=JD" alt="Juan David" class="profile-img">
                             <div class="img-overlay"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        
         <main class="cv-grid">
-            <section class="card glass-panel">
-                <h3><span class="section-icon">⚡</span> <span class="glitch-small" data-text="PERFIL PROFESIONAL">PERFIL PROFESIONAL</span></h3>
-                <p>
-                    Profesional apasionado por la tecnología con enfoque en soluciones escalables y diseño futurista. 
-                    Especializado en arquitectura de software y experiencias de usuario inmersivas. 
-                    Buscando desafíos que rompan la barrera de lo convencional.
-                </p>
-            </section>
-
-            <section class="card glass-panel">
+            <section class="card glass-panel full-width">
                 <h3><span class="section-icon">🛠</span> <span class="glitch-small" data-text="HABILIDADES TÉCNICAS">HABILIDADES TÉCNICAS</span></h3>
                 <div class="skills-container">
-                    <div class="skill-tag">JavaScript (ES6+)</div>
-                    <div class="skill-tag">React / Vue</div>
-                    <div class="skill-tag">Node.js</div>
-                    <div class="skill-tag">Python / AI</div>
-                    <div class="skill-tag">Cybersecurity</div>
-                    <div class="skill-tag">Cloud Architecture</div>
+                    <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="skill-tag"><i class="fab fa-vuejs"></i> Vue.js</div>
+                    <div class="skill-tag"><i class="fab fa-node-js"></i> Node.js</div>
+                    <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+                    <div class="skill-tag"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
                 </div>
             </section>
 
-            <section class="card glass-panel full-width">
-                <h3><span class="section-icon">⚔</span> EXPERIENCIA LABORAL</h3>
-                
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h4>Senior Developer</h4>
-                        <span class="date">2023 - PRESENTE</span>
+            <!-- Projects Section (No Card Wrapper) -->
+            <div class="split-wrapper full-width">
+                <div class="projects-section">
+                    <h3><span class="section-icon">🚀</span> <span class="glitch-small" data-text="Mi Equipo / Agencia">Mi Equipo / Agencia</span></h3>
+                    <h4 class="section-subtitle">Ljcodesystems</h4>
+                    <p class="section-desc">¿Necesitan un grupo completo? Junto a otros 3 desarrolladores construimos el software de tus sueños bajo la agencia LJ Code Systems.</p>
+                    
+                    <div class="projects-container">
+                        <article class="project-card">
+                            <div class="project-image-container">
+                                <img class="project-cover" src="images/LJcode.png" alt="LJ Code Systems" loading="lazy" />
+                                <div class="project-overlay">
+                                    <a href="https://ljcodesystems.site/" target="_blank" rel="noopener noreferrer" class="btn btn-glow">Visitar Agencia</a>
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <h4>LJ Code Systems</h4>
+                                <p>Somos un equipo de 4 personas trabajando de forma sincronizada. Ofrecemos diseños desde cero y soluciones escalables completas para proyectos grandes o empresas emergentes. ¡Contrátanos como equipo!</p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag-sm">Landing Page</span>
+                                    <span class="tag-sm">Trabajo en Equipo</span>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <span class="company">Tech Corp Industries</span>
-                    <ul>
-                        <li>Liderazgo de equipos en desarrollo de aplicaciones de alto rendimiento.</li>
-                        <li>Implementación de arquitecturas de microservicios.</li>
-                        <li>Optimización de sistemas legacy con reducción del 40% en deuda técnica.</li>
-                    </ul>
                 </div>
 
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h4>Full Stack Developer</h4>
-                        <span class="date">2021 - 2023</span>
+                <!-- Proyectos Personales Section -->
+                <div class="projects-section">
+                    <h3><span class="section-icon">💻</span> <span class="glitch-small" data-text="PROYECTOS">PROYECTOS</span></h3>
+                    <h4 class="section-subtitle">TattooInk</h4>
+                    <p class="section-desc">Explora, conecta y encuentra tu próximo tatuaje</p>
+                    
+                    <div class="projects-container">
+                        <article class="project-card">
+                            <div class="project-image-container">
+                                <img class="project-cover" src="images/Proyecto.png" alt="Tattoo Ink" loading="lazy" />
+                                <div class="project-overlay">
+                                    <a href="https://tattooink.site" target="_blank" rel="noopener noreferrer" class="btn btn-glow">Ver Proyecto</a>
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <h4>Tattoo Ink</h4>
+                                <p>TattooInk es una plataforma digital diseñada para ayudar a las personas a encontrar tatuadores, explorar portafolios y descubrir estilos de tatuaje en un solo lugar.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Vue.js</span>
+                                    <span class="tag">Tailwind CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag-sm">Diseño UX/UI</span>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <span class="company">Cyber Systems Ltd</span>
-                    <ul>
-                        <li>Desarrollo de interfaces reactivas y APIs RESTful.</li>
-                        <li>Integración de sistemas de pago y seguridad biométrica.</li>
-                    </ul>
+                </div>
+            </div>
+
+            <section class="card glass-panel full-width">
+                <h3><span class="section-icon">👤</span> <span class="glitch-small" data-text="SOBRE MÍ">SOBRE MÍ</span></h3>
+                <div class="about-content">
+                    <h4>Juan David Erazo Malagon</h4>
+                    <p>Hola! mi nombre es Juan tengo 22 años soy un estudiante de Ingeniería de Sistemas con interés en el desarrollo de soluciones tecnológicas. Me gusta explorar nuevas herramientas, aprender constantemente y trabajar en proyectos que aporten valor a través del software.</p>
+                    <div class="about-tags">
+                        <span class="status-tag">Tecnólogo en Desarrollo de Software</span>
+                        <span class="status-tag">Ingeniería de Sistemas (Cursando)</span>
+                        <span class="status-tag">Disponible Freelance</span>
+                    </div>
                 </div>
             </section>
 
-            <section class="card glass-panel full-width">
-                <h3><span class="section-icon">🎓</span> EDUCACIÓN</h3>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h4>Ingeniería de Sistemas</h4>
-                        <span class="date">2017 - 2021</span>
+            <section class="card glass-panel full-width contact-section">
+                <h3><span class="section-icon">📬</span> <span class="glitch-small" data-text="CONTACTO">CONTACTO</span></h3>
+                <div class="contact-wrapper">
+                    <div class="contact-header">
+                        <h4>¡Conectemos!</h4>
+                        <p>Si tienes una idea o proyecto en mente, ¡hablemos! Estoy disponible para nuevas oportunidades.</p>
                     </div>
-                    <span class="company">Universidad Tecnológica del Futuro</span>
+                    <div class="contact-grid">
+                        <a href="#" onclick="openGmailCompose('Daviderazomalagon@gmail.com'); return false;" class="contact-card">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div class="card-content">
+                                <h5>Email</h5>
+                                <span>Daviderazomalagon@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/juan.dm0/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="icon-box"><i class="fab fa-instagram"></i></div>
+                            <div class="card-content">
+                                <h5>Instagram</h5>
+                                <span>Seguir en Instagram</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/JuanDavid667545" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="icon-box"><i class="fab fa-github"></i></div>
+                            <div class="card-content">
+                                <h5>GitHub</h5>
+                                <span>Ver Repositorios</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; <span id="year"></span> Juan David Erazo. Todos los derechos reservados.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/juan.dm0/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/JuanDavid667545" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="#" onclick="openGmailCompose('Daviderazomalagon@gmail.com'); return false;"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="javascript/script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

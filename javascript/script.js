@@ -1,9 +1,9 @@
 // --- Typewriter Effect ---
 const textElement = document.getElementById('typewriter-text');
 const phrases = [
-    "Hola soy Juan David",
-    "Tecnólogo en desarrollo de software",
-    "Actualmente estudiando ingeniería de sistemas"
+    "Desarrollador Front-end",
+    "Tecnólogo en Desarrollo de Software",
+    "Actualmente estudiando Ingenieria de Sistemas"
 ];
 
 let phraseIndex = 0;
@@ -44,3 +44,24 @@ function typeEffect() {
 
 // Iniciar efecto de escritura
 document.addEventListener('DOMContentLoaded', typeEffect);
+
+// Global function for Gmail compose popup
+window.openGmailCompose = function(email) {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    
+    if (isMobile) {
+        window.location.href = `mailto:${email}`;
+    } else {
+        const url = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${email}`;
+        const width = 600;
+        const height = 600;
+        const left = (screen.width - width) / 2;
+        const top = (screen.height - height) / 2;
+        
+        window.open(
+            url, 
+            '_blank', 
+            `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes,noopener,noreferrer`
+        );
+    }
+}
